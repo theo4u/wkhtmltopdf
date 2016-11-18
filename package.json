@@ -1,0 +1,29 @@
+{
+  "name": "wkhtmltopdf",
+  "version": "1.0.0",
+  "description": "Install wkhtmltopdf package on any OS with NPM or Yarn",
+  "main": "wkhtmltopdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glinford/wkhtmltopdf.git"
+  },
+  "keywords": [
+    "wkhtmltopdf",
+    "pdf",
+    "html",
+    "convert",
+    "html"
+  ],
+  "author": "glinford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glinford/wkhtmltopdf/issues"
+  },
+  "homepage": "https://github.com/glinford/wkhtmltopdf#readme",
+  "dependencies": {
+    "wget-improved": "^1.4.0"
+  }
+}
