@@ -22,7 +22,7 @@ if(platform === 'darwin'){ //OSX
   } else { //32bit
     src = 'http://download.gna.org/wkhtmltopdf/0.12/0.12.3/wkhtmltox-0.12.3_linux-generic-i386.tar.xz';
   }
-  cmd = "tar -xvf wkhtmltopdf.tar.xz && cp ./wkhtmltopdf/bin/wkhtmlto* /usr/bin && cp ./wkhtmltopdf/bin/wkhtmlto* /usr/local/bin";
+  cmd = "tar -xvf wkhtmltopdf.tar.xz && cp ./wkhtmltox/bin/wkhtmlto* /usr/bin && cp ./wkhtmltox/bin/wkhtmlto* /usr/local/bin";
 }
 
 var download = wget.download(src, output, {});
