@@ -9,9 +9,9 @@ yarn add bin-wkhtmltopdf -g
 ```
 # Usage
 ```shell
-wkhtmltox-install
+bin-wkhtmltopdf
 # If error try with Sudo
-sudo wkhtmltox-install
+sudo bin-wkhtmltopdf
 ```
 # TODO
 Install on Windows
