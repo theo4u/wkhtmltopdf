@@ -1,6 +1,6 @@
 {
   "name": "bin-wkhtmltopdf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Install wkhtmltopdf package on any OS with NPM or Yarn",
   "main": "wkhtmltopdf.js",
   "scripts": {
@@ -23,6 +23,10 @@
     "url": "https://github.com/glinford/wkhtmltopdf/issues"
   },
   "homepage": "https://github.com/glinford/wkhtmltopdf#readme",
+  "bin": {
+    "bin-wkhtmltopdf": "wkhtmltopdf.js"
+  },
+  "preferGlobal": "true",
   "dependencies": {
     "wget-improved": "^1.4.0"
   }
