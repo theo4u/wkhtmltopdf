@@ -1,6 +1,6 @@
 {
   "name": "bin-wkhtmltopdf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Install wkhtmltopdf package on any OS with NPM or Yarn",
   "main": "wkhtmltopdf.js",
   "scripts": {
