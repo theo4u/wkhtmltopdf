@@ -3,14 +3,17 @@ var platform = os.platform();
 var wget = require('wget-improved');
 var arch = os.arch();
 var exec = require('child_process').exec;
-var src, output, cmd;
+var src, output, cmd, suffix;
+
+var url = 'https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/';
+var version = '0.12.4';
 
 if(platform === 'darwin'){ //OSX
   output = 'wkhtmltopdf.pkg';
   if(arch.indexOf('64') > -1){ //64bit
-    src = 'http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_osx-cocoa-x86-64.pkg';
+    suffix = '_osx-cocoa-x86-64.pkg';
   } else { //32bit
-    src = 'http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_osx-carbon-i386.pkg';
+    suffix = '_osx-carbon-i386.pkg';
   }
   cmd = "installer -pkg wkhtmltopdf.pkg -target /";
 } else if (platform === 'win32'){ //windows
@@ -18,12 +21,14 @@ if(platform === 'darwin'){ //OSX
 } else { //linux
   output = 'wkhtmltopdf.tar.xz';
   if(arch.indexOf('64') > -1){ //64bit
-    src = 'http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz';
+    suffix = '_linux-generic-amd64.tar.xz';
   } else { //32bit
-    src = 'http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-i386.tar.xz';
+    suffix = '_linux-generic-i386.tar.xz';
   }
   cmd = "tar -xvf wkhtmltopdf.tar.xz && cp ./wkhtmltox/bin/wkhtmlto* /usr/bin && cp ./wkhtmltox/bin/wkhtmlto* /usr/local/bin";
 }
+
+src = url + version + '/wkhtmltox-' + version + suffix;
 
 var download = wget.download(src, output, {});
 download.on('error', function(err) {
