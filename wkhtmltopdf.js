@@ -15,7 +15,7 @@ if(platform === 'darwin'){ //OSX
 	} else { //32bit
 		suffix = '_osx-carbon-i386.pkg';
 	}
-	cmd = "installer -pkg wkhtmltopdf.pkg -target /";
+	cmd = "installer -pkg wkhtmltopdf.pkg -target ./wkhtmltox";
 } else if (platform === 'win32'){ //windows
  // TO DO
 } else { //linux
@@ -25,10 +25,12 @@ if(platform === 'darwin'){ //OSX
 	} else { //32bit
     suffix = '_linux-generic-i386.tar.xz';
 	}
-	cmd = "tar -xvf wkhtmltopdf.tar.xz && cp ./wkhtmltox/bin/wkhtmlto* /usr/bin && cp ./wkhtmltox/bin/wkhtmlto* /usr/local/bin";
+	cmd = "tar -xvf wkhtmltopdf.tar.xz";
 }
 
 src = url + version + '/wkhtmltox-' + version + suffix;
+
+console.log('downloading', src, 'to', output);
 
 var download = wget.download(src, output, {});
 download.on('error', function(err) {
