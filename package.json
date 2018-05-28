@@ -1,7 +1,7 @@
 {
-  "name": "bin-wkhtmltopdf",
-  "version": "1.0.7",
-  "description": "Install wkhtmltopdf package on any OS with NPM or Yarn",
+  "name": "@theo4u/wkhtmltopdf",
+  "version": "1.0.0",
+  "description": "The package automatically downloads linux 64bit wkhtmltopdf binary, to be used with AWS Lambda",
   "main": "wkhtmltopdf.js",
   "scripts": {
     "postinstall": "./wkhtmltox-install",
@@ -9,21 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/glinford/wkhtmltopdf.git"
+    "url": "git+https://github.com/theo4u/wkhtmltopdf.git"
   },
   "keywords": [
     "wkhtmltopdf",
     "pdf",
     "html",
     "convert",
-    "html"
+    "html",
+    "bin"
   ],
-  "author": "glinford",
+  "author": "theo4u",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/glinford/wkhtmltopdf/issues"
+    "url": "https://github.com/theo4u/wkhtmltopdf/issues"
   },
-  "homepage": "https://github.com/glinford/wkhtmltopdf#readme",
+  "homepage": "https://github.com/theo4u/wkhtmltopdf#readme",
   "bin": {
     "wkhtmltopdf": "wkhtmltox/bin/wkhtmltopdf",
     "wkhtmltoimage": "wkhtmltox/bin/wkhtmltoimage"

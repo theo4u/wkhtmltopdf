@@ -1,20 +1,23 @@
-# wkhtmltopdf
-Install wkhtmltopdf and wkhtmltoimage with NPM or YARN on Linux/OSX Distro
+# wkhtmltopdf linux x64
+The package automatically downloads linux 64bit wkhtmltopdf binary. Use case to be used with AWS Lambda functions 
 
 # Installation
 ```shell
-npm install bin-wkhtmltopdf -g
-# OR
-yarn add bin-wkhtmltopdf -g
+npm install @theo4u/wkhtmltopdf
 ```
+
 # Usage
 ```shell
-bin-wkhtmltopdf
-# If error try with Sudo
-sudo bin-wkhtmltopdf
+./node_modules/.bin/wkhtmltopdf
 ```
-# TODO
-Install on Windows
+With [wkhtmltopdf](https://www.npmjs.com/package/wkhtmltopdf):
+```js
+var wkhtmltopdf = require('wkhtmltopdf');
+
+wkhtmltopdf.command = './node_modules/.bin/wkhtmltopdf'
+
+wkhtmltopdf('<h1>hello world</h1>', { output: 'out.pdf' })
+```
 
 # License
 MIT
