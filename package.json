@@ -1,6 +1,6 @@
 {
   "name": "@theo4u/wkhtmltopdf",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The package automatically downloads linux 64bit wkhtmltopdf binary, to be used with AWS Lambda",
   "main": "wkhtmltopdf.js",
   "scripts": {
