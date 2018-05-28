@@ -4,6 +4,7 @@
   "description": "Install wkhtmltopdf package on any OS with NPM or Yarn",
   "main": "wkhtmltopdf.js",
   "scripts": {
+    "postinstall": "./wkhtmltox-install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +25,8 @@
   },
   "homepage": "https://github.com/glinford/wkhtmltopdf#readme",
   "bin": {
-    "bin-wkhtmltopdf": "wkhtmltox-install"
+    "wkhtmltopdf": "wkhtmltox/bin/wkhtmltopdf",
+    "wkhtmltoimage": "wkhtmltox/bin/wkhtmltoimage"
   },
   "preferGlobal": "true",
   "dependencies": {

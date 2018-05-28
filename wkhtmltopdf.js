@@ -13,7 +13,7 @@ cmd = 'tar -xvf wkhtmltopdf.tar.xz'
 
 src = url + version + '/wkhtmltox-' + version + suffix
 
-console.log('installing linux binary 64bit of wkhtmltopdf');
+console.log('downloading linux binary 64bit of wkhtmltopdf from', src, 'to', output);
 
 var download = wget.download(src, output, {})
 download.on('error', function (err) {
