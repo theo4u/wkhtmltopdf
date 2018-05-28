@@ -9,6 +9,7 @@ npm install @theo4u/wkhtmltopdf
 # Usage
 ```shell
 ./node_modules/.bin/wkhtmltopdf
+./node_modules/.bin/wkhtmltoimage
 ```
 With [wkhtmltopdf](https://www.npmjs.com/package/wkhtmltopdf):
 ```js
